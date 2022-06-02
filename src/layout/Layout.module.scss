@@ -1,0 +1,120 @@
+@use "./colors";
+
+#main {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+
+  .sidebar {
+    height: 100%;
+    background-color: colors.$bg-sidebar;
+    padding: 47.07px 56.5px;
+
+    .logo {
+      font-weight: 600;
+      font-size: 13px;
+
+      .variant {
+        color: colors.$text-variant;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      margin-top: 122px;
+
+      li {
+        text-transform: capitalize;
+        font-family: "Noto sans JP", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        color: colors.$text-default;
+        margin-bottom: 28px;
+        cursor: pointer;
+
+        &.active,
+        &:hover,
+        &:focus {
+          color: colors.$text-active;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .content {
+    height: 100%;
+    padding: 53px 0 0 83px;
+
+    h1 {
+      font-weight: 500;
+      font-size: 24px;
+      color: colors.$gray-2;
+    }
+
+    .button-row-lg,
+    .button-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 45px;
+
+      .btn-group {
+        width: 236px;
+
+        .hidden {
+          visibility: hidden;
+        }
+
+        p {
+          font-family: "Ubuntu Mono", monospace;
+          font-size: 12px;
+
+          &.variant-black {
+            color: colors.$black;
+          }
+
+          &.variant-gray-1 {
+            color: colors.$gray-1;
+          }
+
+          &.variant-gray-2 {
+            color: colors.$gray-2;
+          }
+
+          &.variant-gray-3 {
+            color: colors.$gray-3;
+          }
+        }
+      }
+    }
+
+    .button-row-lg {
+      .btn-group {
+        width: 300px;
+      }
+    }
+
+    .note {
+      color: colors.$gray-0;
+
+      p:first-child {
+        font-size: 12px;
+        font-family: "Ubuntu Mono", monospace;
+        margin-bottom: 34px;
+      }
+
+      p:last-child {
+        font-size: 14px;
+        font-family: "Montserrat", sans-serif;
+        margin-bottom: 24px;
+        font-weight: 500;
+
+        span {
+          font-weight: 700;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
